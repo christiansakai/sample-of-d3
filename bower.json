@@ -1,5 +1,5 @@
 {
-  "name": "thirdshelf",
+  "name": "sampleofd3",
   "version": "0.0.0",
   "dependencies": {
     "angular": "^1.3.0",
@@ -13,7 +13,7 @@
     "angular-mocks": "^1.3.0"
   },
   "appPath": "app",
-  "moduleName": "thirdshelfApp",
+  "moduleName": "sampleofd3App",
   "overrides": {
     "bootstrap": {
       "main": [

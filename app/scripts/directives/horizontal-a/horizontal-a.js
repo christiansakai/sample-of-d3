@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('thirdshelfApp')
+angular.module('sampleofd3App')
   .directive('horizontalA', function () {
     return {
       restrict: 'E',

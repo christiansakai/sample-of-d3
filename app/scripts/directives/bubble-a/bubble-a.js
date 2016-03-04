@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('thirdshelfApp')
+angular.module('sampleofd3App')
   .directive('bubbleA', function () {
     return {
       restrict: 'E',

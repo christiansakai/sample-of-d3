@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name thirdshelfApp.controller:MainCtrl
+ * @name sampleofd3App.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the thirdshelfApp
+ * Controller of the sampleofd3App
  */
-angular.module('thirdshelfApp')
+angular.module('sampleofd3App')
   .controller('HorizontalCtrl', function () {
     var data = {
       "RESULT": "RESULT_SUCCESS",

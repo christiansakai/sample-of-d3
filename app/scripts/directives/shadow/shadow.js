@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('thirdshelfApp')
+angular.module('sampleofd3App')
   .directive('shadow', function () {
     return {
       restrict: 'E',

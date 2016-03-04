@@ -3,7 +3,7 @@
 describe('Controller: AboutCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('thirdshelfApp'));
+  beforeEach(module('sampleofd3App'));
 
   var AboutCtrl,
     scope;

@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name thirdshelfApp.controller:AboutCtrl
+ * @name sampleofd3App.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the thirdshelfApp
+ * Controller of the sampleofd3App
  */
-angular.module('thirdshelfApp')
+angular.module('sampleofd3App')
   .controller('BubbleCtrl', function ($scope) {
     var self = this;
 

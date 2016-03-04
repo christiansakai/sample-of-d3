@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name thirdshelfApp
+ * @name App
  * @description
- * # thirdshelfApp
+ * # sampleofd3App
  *
  * Main module of the application.
  */
 angular
-  .module('thirdshelfApp', [
+  .module('sampleofd3App', [
     'ngRoute'
   ])
   .config(function ($routeProvider) {
