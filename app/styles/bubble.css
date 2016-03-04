@@ -1,0 +1,60 @@
+/* Basic */
+.bubble-chart {
+  background-color: #FFF;
+}
+
+/* Header */
+.bubble-chart .header .title {
+  fill: black;
+  font-size: 16px;
+}
+
+.bubble-chart .header .title {
+  fill: black;
+  font-size: 16px;
+}
+
+.bubble-chart .header .underline {
+  fill: grey;
+}
+
+/* Bubble */
+.bubble-chart .bubble {
+  transition: all 0.3s ease-in-out;
+}
+
+.bubble-chart .bubble:hover {
+  transform: translateX(0px) translateY(-10px);
+}
+
+/* Legend */
+.bubble-chart .legend-group .number {
+  font-size: 14px;
+}
+
+.bubble-chart .legend-group .legend {
+  font-size: 8px;
+}
+
+/* Insights */
+.bubble-chart .insight-group .number {
+  font-size: 24px;
+  fill: black;
+}
+
+.bubble-chart .insight-group .title {
+  font-size: 12px;
+  fill: grey;
+}
+
+.bubble-chart .insight-group .description {
+  font-size: 11px;
+}
+
+.bubble-chart .insight-group .up {
+  fill: green;
+}
+
+.bubble-chart .insight-group .down {
+  fill: red;
+}

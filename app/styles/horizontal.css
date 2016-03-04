@@ -1,0 +1,13 @@
+.horizontal {
+  background-color: #FFF;
+}
+
+.horizontal .separator {
+  fill: grey;
+}
+
+.horizontal .legend {
+  font-size: 14px;
+  fill: black;
+  font-family: 'Helvetica';
+}

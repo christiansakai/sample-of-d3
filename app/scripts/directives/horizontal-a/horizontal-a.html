@@ -1,0 +1,198 @@
+<div class="row">
+
+  <div class="col-xs-12">
+
+    <!-- Horizontal Stack -->
+    <h3>Horizontal Stack A</h3>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <p>This is an example of horizontal stack bar</p>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Chart -->
+    <div class="row">
+      <div class="col-xs-12">
+        <div donut class="donut" data="donutData"></div>
+        <div donut class="donut" data="donutData"></div>
+        <div donut class="donut" data="donutData"></div>
+        <div horizontal data="horizontalData" options="{
+              fakeLastTwo: true,
+              lastTwoSize: 0.4,
+              chartHeightCoefficient: 1,
+              colorCategory: '20'
+            }" show-element-on-hover=".donut" color-category="20"></div>
+      </div>
+    </div>
+    <!-- End Chart -->
+
+
+    <!-- HTML Code -->
+    <h4>HTML</h4>
+
+    <div class="row">
+      <div class="col-xs-12">
+          <pre class="language-markup" prism>
+  &lt;patterns&gt;&lt;/patterns&gt;
+  &lt;shadow&gt;&lt;/shadow&gt;
+
+  &lt;!-- Color categories are 10, 20, 20b, 20c --&gt;
+  &lt;!-- https://github.com/mbostock/d3/wiki/Ordinal-Scales --&gt;
+
+  &lt;div donut class="donut" data="donutData"&gt;&lt;/div&gt;
+  &lt;div donut class="donut" data="donutData"&gt;&lt;/div&gt;
+  &lt;div donut class="donut" data="donutData"&gt;&lt;/div&gt;
+
+  &lt;div horizontal options="{ fakeLastTwo: false,
+                                lastTwoSize: 0.4,
+                                colorCategory: '20',
+                                chartHeightCoefficient: 1}" data="horizontalData" color-category="20"&gt;&lt;/div&gt;
+</pre>
+      </div>
+    </div>
+    <!-- End HTML Code -->
+
+    <!-- CSS Code -->
+    <h4>CSS</h4>
+
+    <div class="row">
+      <div class="col-xs-12">
+          <pre class="language-css" prism>
+.horizontal {
+  background-color: #FFF;
+}
+
+.horizontal .separator {
+  fill: grey;
+}
+
+.horizontal .legend {
+  font-size: 14px;
+  fill: black;
+  font-family: 'Helvetica';
+}
+
+.donut {
+  display: inline-block;
+  visibility: hidden;
+  width: 32%;
+}</pre>
+      </div>
+    </div>
+    <!-- End CSS Code ->
+
+    <!-- JS Code -->
+    <h4>JS</h4>
+
+    <div class="row">
+      <div class="col-xs-12">
+          <pre class="language-javascript" prism>
+  var data = {
+      "id": "157",
+      "retailerId": "200",
+      "monthsCovered": "16",
+      "firstDate": "2014-04-28 16:22:37",
+      "lastDate": "2015-07-30 11:24:23",
+      "oneTimeMemberCount": "43",
+      "oneTimeCustomerCount": "200",
+      "casualMemberCount": "33",
+      "casualCustomerCount": "150",
+      "frequentMemberCount": "78",
+      "frequentCustomerCount": "350",
+      "atriskMemberCount": "58",
+      "atriskCustomerCount": "200",
+      "dormantMemberCount": "12",
+      "dormantCustomerCount": "100",
+      "oneTimeRevenue": "16",
+      "casualRevenue": "20",
+      "frequentRevenue": "40",
+      "atriskRevenue": "12",
+      "dormantRevenue": "12",
+      "oneTimeATV": "121",
+      "casualATV": "154",
+      "frequentATV": "75",
+      "oneTimeATF": "1",
+      "casualATF": "2.4",
+      "frequentATF": "12.6",
+      "oneTimeCLV": "121",
+      "casualCLV": "367",
+      "frequentCLV": "1567",
+      "purchaseCycleInDays": "30",
+      "atriskPurchaseCycle": "77",
+      "dormantPurchaseCycle": "154",
+      "dateRun": "2015-08-14 08:00:17",
+      "published": "0",
+      "runCode": "abcde6766"
+    };
+
+    this.horizontalData = [{
+      legend: 'One Time',
+      value: data.oneTimeCustomerCount,
+      hover: '#donut-1'
+    }, {
+      legend: 'Casual',
+      value: data.casualCustomerCount,
+      color: 'red',
+      hover: '#donut-2'
+    }, {
+      legend: 'Frequent',
+      value: data.frequentCustomerCount,
+      hover: '#donut-3'
+    }, {
+      legend: 'At Risk',
+      value: data.atriskCustomerCount,
+      pattern: 'url(#diagonal-stripe-1)'
+    }, {
+      legend: 'Dormant',
+      value: data.dormantCustomerCount,
+      pattern: 'url(#vertical-stripe-3)'
+    }];
+
+    var additionalData = [{
+      averageTxHV: "8.6",
+      averageTxLV: "1.1",
+      averageTxMV: "2.6",
+      averageValueHV: "2019",
+      averageValueLV: "121",
+      averageValueMV: "452",
+      countCustHV: "0",
+      countCustLV: "0",
+      countCustMV: "0",
+      dateRun: "2015-05-22 19:41:22",
+      firstDate: "2013-03-21 13:08:50",
+      id: "0",
+      lastDate: "2015-05-21 13:08:50",
+      monthsCovered: "26",
+      numberOfCustomers: "3947",
+      percentCashHV: "44",
+      percentCashLV: "16",
+      percentCashMV: "40",
+      percentCustAtRisk: "33",
+      percentCustHV: "11",
+      percentCustLV: "64",
+      percentCustLost: "45",
+      percentCustMV: "25",
+      percentCustRecent: "25",
+      processed: "0",
+      purchaseCycleInDays: "62",
+      retailerId: "",
+      runCode: "",
+      taggedPercentage: "37",
+      totalCash: "0",
+      totalTransactions: "42327"
+    }];
+
+    this.donutData = [additionalData[0].percentCashLV, additionalData[0].percentCustLV];
+          </pre>
+      </div>
+    </div>
+    <!-- End JS Code -->
+
+    <!-- End Horizontal Stack -->
+
+  </div>
+
+</div>

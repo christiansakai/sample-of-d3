@@ -1,0 +1,5 @@
+.donut {
+  display: inline-block;
+  visibility: hidden;
+  width: 32%;
+}

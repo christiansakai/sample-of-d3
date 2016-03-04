@@ -1,0 +1,188 @@
+<div class="row">
+
+  <div class="col-xs-12">
+
+    <!-- Bubble -->
+    <h3>Bubble A</h3>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <p>This is an example of bubble chart without insights</p>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Chart -->
+    <div class="row">
+      <div class="col-xs-12">
+        <div bubble data="data" options="{ displayInsights: false,
+                                          displayHeader: false,
+                                          colorCategory: '20',
+                                          pathStrokeWidth: 1.5,
+                                          bubbleMinSize: 0.1,
+                                          minimumDifferences: 0.02,
+                                          pathColor: '#2E3642' }"></div>
+      </div>
+    </div>
+    <!-- End Chart -->
+
+    <!-- HTML Code -->
+    <h4>HTML</h4>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <pre class="language-markup">
+&lt;!-- These has to be put above the bubble or horizontal directive --&gt;
+&lt;patterns&gt;&lt;/patterns&gt;
+&lt;shadow&gt;&lt;/shadow&gt;
+
+          &lt;!-- Color categories are 10, 20, 20b, 20c --&gt;
+&lt;!-- https://github.com/mbostock/d3/wiki/Ordinal-Scales --&gt;
+
+&lt;div bubble data="data" options="{ displayInsights: false,
+                                  displayHeader: false,
+                                  colorCategory: '20',
+                                  pathStrokeWidth: 1.5,
+                                  bubbleMinSize: 0.1,
+                                  minimumDifferences: 0.02,
+                                  pathColor: '#2E3642' }"&gt;&lt;/div&gt;
+</pre>
+      </div>
+    </div>
+    <!-- End HTML Code -->
+
+    <!-- CSS Code -->
+    <h4>CSS</h4>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <pre class="language-css" prism>
+/* Basic */
+.bubble-chart {
+  background-color: #FFF;
+}
+
+/* Header */
+.bubble-chart .header .title {
+  fill: black;
+  font-size: 16px;
+}
+
+.bubble-chart .header .title {
+  fill: black;
+  font-size: 16px;
+}
+
+.bubble-chart .header .underline {
+  fill: grey;
+}
+
+/* Bubble */
+.bubble-chart .bubble {
+  transition: all 0.3s ease-in-out;
+}
+
+.bubble-chart .bubble:hover {
+  transform: translateX(0px) translateY(-10px);
+}
+
+/* Legend */
+.bubble-chart .legend-group .number {
+  font-size: 14px;
+}
+
+.bubble-chart .legend-group .legend {
+  font-size: 8px;
+}
+
+/* Insights */
+.bubble-chart .insight-group .number {
+  font-size: 24px;
+  fill: black;
+}
+
+.bubble-chart .insight-group .title {
+  font-size: 12px;
+  fill: grey;
+}
+
+.bubble-chart .insight-group .description {
+  font-size: 11px;
+}
+
+.bubble-chart .insight-group .up {
+  fill: green;
+}
+
+.bubble-chart .insight-group .down {
+  fill: red;
+}</pre>
+      </div>
+    </div>
+    <!-- End CSS Code ->
+
+    <!-- JS Code -->
+    <h4>JS</h4>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <pre class="language-javascript" prism>
+var data = [{
+      legend: 'TOTAL REVENUE',
+      value: 942177,
+      insights: [{
+        number: '18%',
+        title: 'TAGGING RATE',
+        description: 'Down 4% from the previous week'
+      }]
+    }, {
+      legend: 'REVENUE FROM IDENTIFIED CUSTOMERS',
+      value: 454819,
+      insights: [{
+        number: '2,200',
+        title: 'IDENTIFIED CUSTOMERS',
+        description: 'Up 8% from the previous week'
+      }, {
+        number: '1,952',
+        title: 'CONTACTABLE CUSTOMERS',
+        description: 'Down 2% from the previous week'
+      }]
+    }, {
+      legend: 'REVENUE FROM MEMBERS',
+      value: 271444,
+      insights: [{
+        number: '1,472',
+        title: 'PROGRAM MEMBERS',
+        description: 'Up 5% from the previous week'
+      }],
+      color: 'red'
+    }, {
+      legend: 'REVENUE FROM OUTSIDE',
+      value: 350699,
+      insights: [{
+        number: '2,502',
+        title: 'OUTSIDE MEMBERS',
+        description: 'Up 7% from the previous week'
+      }],
+      pattern: 'url(#diagonal-stripe-1)'
+    }, {
+      legend: 'REVENUE FROM 3RD PARTY',
+      value: 123045,
+      insights: [{
+        number: '3,572',
+        title: '3RD PARTY MEMBERS',
+        description: 'Down 5% from the previous week'
+      }]
+    }];
+  });
+        </pre>
+      </div>
+    </div>
+    <!-- End JS Code -->
+
+    <!-- End Bubble -->
+
+  </div>
+
+</div>
